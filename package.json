@@ -1,16 +1,16 @@
 {
   "name": "my-disney-app-assets",
   "version": "1.0.0",
-  "description": "",
+  "description": "Static asset server for local development",
   "main": "index.js",
   "scripts": {
-    "serve": "npx serve dist -l 5001"
+    "serve": "http-server dist -p 5001 --cors -c-1 --gzip"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "serve": "^14.2.5"
+    "http-server": "^14.1.1"
   }
 }
