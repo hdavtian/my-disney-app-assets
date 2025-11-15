@@ -102,9 +102,25 @@ Content types are automatically set based on file extensions.
 
 ## Manual Testing
 
-### Using the PowerShell Script
+### Using Azure CLI Batch Upload
 
-For local testing, use the provided PowerShell script:
+To manually upload all images from the `dist/` directory:
+
+```powershell
+az storage blob upload-batch `
+    --account-name "disneyimages" `
+    --auth-mode login `
+    --container-name "images" `
+    --destination-path "disney-movies-app" `
+    --source dist `
+    --overwrite
+```
+
+This uploads all files in `dist/` (including subdirectories) to Azure Blob Storage, preserving the folder structure.
+
+### Using the PowerShell Test Script
+
+For testing with a few sample images, use the provided PowerShell script:
 
 ```powershell
 # From the repository root
