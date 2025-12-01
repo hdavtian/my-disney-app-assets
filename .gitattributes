@@ -1,2 +1,7 @@
 # Ignore PowerShell scripts
+*.ps1 linguist-ignore
+*.psm1 linguist-ignore
+*.psd1 linguist-ignore
+
+# Ignore PowerShell scripts
 scripts/** linguist-ignore
